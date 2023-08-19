@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
@@ -23,6 +24,35 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    padding: 30px 50px;
+    align-items: flex-start;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 68px;
+    padding: 0 25px;
+}
+
+.topbar a {
+    padding-top: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.topbar a:hover {
+    border-top: 2px solid var(--main-color, #0065FC);
+    color: var(--main-color, #0065FC);
 }
 
 .section-title {
