@@ -28,7 +28,7 @@ body {
 
 .logo {
     display: flex;
-    padding: 30px 50px;
+    padding: 30px 50px 30px 0px;
     align-items: flex-start;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .topbar a {
-    padding-top: 14px;
+    padding-top: 14px; /*  en dessous en version mobile */ /*  padding, reproduit la couleur de fond nécessaire pour la bordure */
     text-decoration: none;
     color: black;
 }
@@ -53,6 +53,48 @@ body {
 .topbar a:hover {
     border-top: 2px solid var(--main-color, #0065FC);
     color: var(--main-color, #0065FC);
+}
+
+.info {
+    margin-top: 30px;
+}
+
+.headline {
+    margin-top: 8px;
+}
+
+.search-bar {
+    display: flex;
+    margin: 35px 0;
+}
+
+.search-bar input {
+    padding: 0 24px;
+    width: 146px;
+    border-top: 1px solid var(--main-bg-color, #F2F2F2);
+    border-bottom: 1px solid var(--main-bg-color, #F2F2F2);
+    border-left: none;
+    border-right: none;
+}
+
+#city-search::placeholder {
+    color: var(--black, #000);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.button-search {
+    padding: 15px 16px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    background: var(--main-color, #0065FC);
+    color: var(--white, #FFF);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.button-search:hover {
+    cursor: pointer;
 }
 
 .section-title {
@@ -188,5 +230,6 @@ body {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+
 }
