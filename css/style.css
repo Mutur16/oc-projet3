@@ -37,7 +37,7 @@ body {
     justify-content: space-between;
 }
 
-.topbar ul {
+.topbar-links {
     display: flex;
     list-style-type: none;
     gap: 68px;
@@ -45,7 +45,7 @@ body {
 }
 
 .topbar a {
-    padding-top: 14px; /*  en dessous en version mobile */ /*  padding, reproduit la couleur de fond nécessaire pour la bordure */
+    padding-top: 14px; 
     text-decoration: none;
     color: black;
 }
@@ -66,15 +66,15 @@ body {
 .search-bar {
     display: flex;
     margin: 35px 0;
+    width: 377px;
+    border: 1px solid var(--main-bg-color, #F2F2F2);
+    border-radius: 15px;
 }
 
 .search-bar input {
     padding: 0 24px;
-    width: 146px;
-    border-top: 1px solid var(--main-bg-color, #F2F2F2);
-    border-bottom: 1px solid var(--main-bg-color, #F2F2F2);
-    border-left: none;
-    border-right: none;
+    width: 150px;
+    border: none;
 }
 
 #city-search::placeholder {
@@ -83,7 +83,7 @@ body {
     font-weight: 700;
 }
 
-.button-search {
+.search-desktop {
     padding: 15px 16px;
     border-radius: 0px 15px 15px 0px;
     border: none;
@@ -93,7 +93,11 @@ body {
     font-weight: 700;
 }
 
-.button-search:hover {
+.search-mobile {
+    display: none;
+}
+
+.search-desktop:hover {
     cursor: pointer;
 }
 
@@ -231,5 +235,70 @@ body {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
+    .main-container {
+        padding: 0;
+    }
+    .topbar {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .logo {
+        padding: 30px;
+    }
+
+    .topbar-links {
+        display: flex;
+        margin: 0;
+        padding: 0 0 15px 0;
+        width: 100%;
+        gap: 0;
+    }
+
+    .topbar a:hover {
+        border-top: 0;
+    }
+
+    .column { 
+        flex:50%; 
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--main-bg-color, #0065FC);
+    }
+
+    .column:hover { 
+        flex:50%; 
+        border-bottom: 2px solid var(--main-color, #0065FC);
+        color: var(--main-color, #0065FC);
+    }
+
+    .info {
+        padding: 0 20px;
+    }
+
+    .headline {
+        margin-bottom: 0;
+    }
+
+    .search-mobile {
+        display: block;
+        padding: 15px 16px;
+        border-radius: 15px;
+        border: none;
+        background: var(--main-color, #0065FC);
+        box-shadow: 0 3px 3px rgb(197, 196, 196);
+        cursor: pointer;
+    }
+    
+    .search-desktop {
+        display: none;
+    }
+
+    .search-bar {
+        width: 335px;
+    }
+
+    .search-bar input {
+        width: 190px;
+    }
 }
