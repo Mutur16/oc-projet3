@@ -26,17 +26,37 @@
             </nav>
         </header>
         <main>
-            <div>
-                <section class="info">
+            <div class="search">
+                <div class="headline">
                     <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
-                    <p class="headline">En plein centre-ville ou en pleine nature</p>
-                    <form class="search-bar" id="form"> 
-                        <img class="location" src="images/icon/location.svg" alt="Lieu" width="52" height="51">
-                        <input type="text" id="city-search" name="s" placeholder="Marseille, France">
-                        <button class="search-desktop">Rechercher</button>
-                        <button class="search-mobile"><img src="images/icon/search.svg" alt="Bouton pour lancer la recherche" width="16" height="16"></button>
-                    </form>
-                </section>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </div>
+                <form class="search-bar" id="form"> 
+                    <i class="fa-solid fa-location-dot fa-lg" style="color: #000000;"></i>
+                    <input type="text" id="city-search" name="s" placeholder="Marseille, France">
+                    <button class="search-desktop">Rechercher</button>
+                    <button class="search-mobile"><img src="images/icon/search.svg" alt="Bouton pour lancer la recherche" width="16" height="16"></button>
+                </form>
+                <div class="filters">
+                    <span>Filtres</span>
+                    <div>
+                        <input type="radio" id="economy" name="filtre" class="filter" value="economy" />
+                        <label for="economy"><i class="fa-solid fa-money-bill-wave fa-lg" style="color: #0065fc;"></i>Economique</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="family" name="filtre" class="filter" value="family" />
+                        <label for="family"><i class="fa-solid fa-person fa-lg" style="color: #0065fc;"></i>Familial</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="romantic" name="filtre" class="filter" value="romantic" />
+                        <label for="romantic"><i class="fa-solid fa-heart fa-lg" style="color: #0065fc;"></i>Romantique</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="highlights" name="filtre" class="filter" value="highlights" />
+                        <label for="highlights"><i class="fa-solid fa-fire fa-lg" style="color: #0065fc;"></i>Nos pépites</label>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-info fa-xs" style="color: #0065fc;"></i>Plus de 500 logements sont disponibles dans cette ville</span>
             </div>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">

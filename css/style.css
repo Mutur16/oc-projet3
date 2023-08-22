@@ -4,7 +4,7 @@
 }
 
 :root {
-    --main-color: #0065FC;
+    --main-color: rgb(0, 101, 252);
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
@@ -41,7 +41,7 @@ body {
     display: flex;
     list-style-type: none;
     gap: 68px;
-    padding: 0 25px;
+    padding: 0 2px;
 }
 
 .topbar a {
@@ -55,25 +55,36 @@ body {
     color: var(--main-color, #0065FC);
 }
 
-.info {
-    margin-top: 30px;
+.headline p{
+    margin-top: 8px;
+    margin-bottom: 0;
 }
 
-.headline {
-    margin-top: 8px;
+.search {
+    margin-top: 30px;
 }
 
 .search-bar {
     display: flex;
-    margin: 35px 0;
-    width: 377px;
-    border: 1px solid var(--main-bg-color, #F2F2F2);
+    width: 360px;
+    height: 49px;
+    align-items: center;
     border-radius: 15px;
+    border: 1px solid var(--grey, #F2F2F2);
+    background: var(--white, #FFF);
+    margin: 35px 0;
+}
+
+.fa-location-dot {
+    padding: 25px 18px;
+    background-color: var(--main-bg-color);
+    border-radius: 15px 0 0 15px;
 }
 
 .search-bar input {
     padding: 0 24px;
-    width: 150px;
+    width: 147px;
+    height: 49px;
     border: none;
 }
 
@@ -84,6 +95,7 @@ body {
 }
 
 .search-desktop {
+    
     padding: 15px 16px;
     border-radius: 0px 15px 15px 0px;
     border: none;
@@ -91,6 +103,7 @@ body {
     color: var(--white, #FFF);
     font-size: 18px;
     font-weight: 700;
+    color: var(--white, #FFF);
 }
 
 .search-mobile {
@@ -99,6 +112,48 @@ body {
 
 .search-desktop:hover {
     cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.filters span{
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+input[type="radio"].filter {
+    display: none;
+}
+
+input[type="radio"].filter + label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid 2px var(--main-bg-color);
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 12px 18px;
+    cursor: pointer;
+    margin-bottom: 35px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+input[type="radio"].filter:hover + label {
+    background-color: var(--filter-bg-color);
+}
+
+.fa-info {
+    padding: 10px 8px;
+    border: solid 2px var(--main-bg-color);
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 35px;
 }
 
 .section-title {
@@ -272,7 +327,7 @@ body {
         color: var(--main-color, #0065FC);
     }
 
-    .info {
+    .search {
         padding: 0 20px;
     }
 
