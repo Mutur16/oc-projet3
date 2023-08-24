@@ -79,6 +79,7 @@ body {
     padding: 25px 18px;
     background-color: var(--main-bg-color);
     border-radius: 15px 0 0 15px;
+    color: #000000
 }
 
 .search-bar input {
@@ -126,25 +127,29 @@ body {
     font-weight: 700;
 }
 
-input[type="radio"].filter {
-    display: none;
+.fa-money-bill-wave .fa-person .fa-heart .fa-fire{
+    color: #0065fc
 }
 
-input[type="radio"].filter + label {
+.filter-btn {
     display: flex;
+    gap: 15px;
+}
+
+.filter-btn button {
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     border: solid 2px var(--main-bg-color);
     background-color: var(--white);
     border-radius: 25px;
-    padding: 12px 18px;
+    padding:12px 18px;
     cursor: pointer;
-    margin-bottom: 35px;
     font-size: 17px;
     font-weight: 700;
 }
 
-input[type="radio"].filter:hover + label {
+.filters button:hover {
     background-color: var(--filter-bg-color);
 }
 
@@ -153,6 +158,14 @@ input[type="radio"].filter:hover + label {
     border: solid 2px var(--main-bg-color);
     border-radius: 50px;
     margin-right: 10px;
+    margin-bottom: 35px;
+    color: #0065fc
+}
+
+.info {
+    display: flex;
+    align-items: baseline;
+    margin-top: 35px;
     margin-bottom: 35px;
 }
 
@@ -255,6 +268,16 @@ input[type="radio"].filter:hover + label {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filters {
+        display: block;
+    }
+
+    .filter-btn {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -305,7 +328,6 @@ input[type="radio"].filter:hover + label {
     .topbar-links {
         display: flex;
         margin: 0;
-        padding: 0 0 15px 0;
         width: 100%;
         gap: 0;
     }
@@ -336,13 +358,18 @@ input[type="radio"].filter:hover + label {
     }
 
     .search-mobile {
-        display: block;
-        padding: 15px 16px;
+        display: flex;
+        margin-left: auto;
+        padding: 25px 17px;
         border-radius: 15px;
         border: none;
         background: var(--main-color, #0065FC);
         box-shadow: 0 3px 3px rgb(197, 196, 196);
         cursor: pointer;
+    }
+
+    .fa-magnifying-glass {
+        color: #FFF;
     }
     
     .search-desktop {
@@ -350,10 +377,26 @@ input[type="radio"].filter:hover + label {
     }
 
     .search-bar {
-        width: 335px;
+        width: 100%;
     }
 
     .search-bar input {
         width: 190px;
     }
+
+    .filter-btn {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btn-inline {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .filter-btn button {
+        width: 100%;
+    }
+
 }
