@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +12,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <div class="main-container">
         <header>
             <nav class="topbar">
-                <img class="logo" src="images/logo/Booki.png" alt="Logo de Booki" width="61" height="19">
+                <img class="logo" src="./images/logo/Booki.png" alt="Logo de Booki" width="61" height="19">
                 <ul class="topbar-links">
-                    <li class="column"><a href="#">Hébergements</a></li>
-                    <li class="column"><a href="#">Activités</a></li>
+                    <li class="column"><a href="#hebergements">Hébergements</a></li>
+                    <li class="column"><a href="#activities">Activités</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,7 +33,7 @@
                     <i class="fa-solid fa-location-dot fa-lg"></i>
                     <input type="text" id="city-search" name="s" placeholder="Marseille, France">
                     <button type="submit" class="search-desktop">Rechercher</button>
-                    <button class="search-mobile"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                    <button type="submit" class="search-mobile"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
                 </form>
                 <div class="filters">
                     <span>Filtres</span>
@@ -48,7 +46,7 @@
                             <button type="button"><i class="fa-solid fa-heart fa-lg"></i>Romantique</button>
                             <button type="button"><i class="fa-solid fa-fire fa-lg"></i>Nos pépites</button>
                         </div> 
-                        </div>
+                    </div>
                 </div>
                 <div class="info">
                     <div>
@@ -61,7 +59,7 @@
             </div>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
-                        <h2 class="section-title">Hébergements à Marseille</h2>
+                    <h2 id="hebergements" class="section-title">Hébergements à Marseille</h2>
                     <div class="hebergements-cards">
                         <div class="hebergements-row">
                             <article class="card">
@@ -233,10 +231,10 @@
                 </section>
             </div>
             <div class="activities">
-                <h2 class="section-title">Activités à Marseille</h2>
+                <h2 id="activities" class="section-title">Activités à Marseille</h2>
                 <div class="activities-row">
                     <article class="card">
-                        <img src="./images/activites/reno-laithienne.jpg" alt="Image de bâteaux dans un port">
+                        <img src="./images/activites/reno-laithienne.jpg" alt="Image du Vieux-Port de Marseille">
                         <div class="card-content">
                             <div class="card-txt">
                                 <h3 class="card-title-activities">Vieux-Port</h3>
@@ -244,7 +242,7 @@
                         </div>
                     </article>
                     <article class="card">
-                        <img src="./images/activites/paul-hermann.jpg" alt="Image du fort dans un paysage rocailleux">
+                        <img src="./images/activites/paul-hermann.jpg" alt="Image du Fort de Pomègues">
                         <div class="card-content">
                             <div class="card-txt">
                                 <h3 class="card-title-activities">Fort de Pomègues</h3>
@@ -298,5 +296,4 @@
         </footer>
     </div>
 </body>
-
 </html>
