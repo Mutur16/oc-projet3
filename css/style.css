@@ -177,7 +177,6 @@ body {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    cursor: pointer;
 }
 
 .card img {
@@ -211,6 +210,13 @@ body {
     height: fit-content;
 }
 
+.hebergements-and-populaires a {
+    width: 100%;
+    min-width: 3em;
+    text-decoration: none;
+    color: black;
+}
+
 /****** Hebergements ***********/
 
 .hebergements {
@@ -225,8 +231,6 @@ body {
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-width: 3em;
     margin-top: 30px;
 }
 
@@ -260,13 +264,12 @@ body {
     margin-bottom: 0;
 }
 
-.hebergements-cards a {
+.more { 
     display: flex;
-    margin-top: 35px;
+    margin-top: 33px;
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
-    cursor: pointer;
     color: black;
 }
 
@@ -328,6 +331,13 @@ body {
     gap: 30px;
 }
 
+.activities a {
+    width: 100%;
+    min-width: 3em;
+    text-decoration: none;
+    color: black;
+}
+
 .activities-row {
     display: inline-flex;
     gap: 30px;
@@ -337,9 +347,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: 3em;
     height: 439px;
-    cursor: pointer;
     padding: 0;
 }
 
@@ -429,11 +437,11 @@ footer {
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 20px;
     }
 
     .populaires-cards .card {
-        width: 30%;
+        width: 100%;
         margin-top: 23px;
     }
 
@@ -537,12 +545,13 @@ footer {
 
     .btn-inline {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         gap: 10px;
     }
 
     .filter-btn button {
-        width: 100%;
+        width: 48%;
     }
 
     .info {
